@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.1 (Python 3.8.3 on darwin)" generated="20201206 14:19:02.201" rpa="false">
+<suite id="s1" name="FilterError test" source="/Users/jamielees/Automation Projects/1. ROBOT AUTOMATION/Samuel/Tests/FilterError_test.robot">
+<test id="s1-t1" name="Mens Shoes Filter error">
+<kw name="Configure and Open Browser" library="Config" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${OverrideURL}</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20201206 14:19:02.334" level="INFO">Opening browser 'chrome' to base url 'https://www.samuel-windsor.co.uk/'.</msg>
+<status status="PASS" starttime="20201206 14:19:02.334" endtime="20201206 14:19:06.893"></status>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>.25 Seconds</arg>
+</arguments>
+<status status="PASS" starttime="20201206 14:19:06.893" endtime="20201206 14:19:06.894"></status>
+</kw>
+<status status="PASS" starttime="20201206 14:19:02.333" endtime="20201206 14:19:06.894"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${mens_shoes_link}</arg>
+<arg>15 Seconds</arg>
+</arguments>
+<status status="PASS" starttime="20201206 14:19:06.895" endtime="20201206 14:19:07.159"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${mens_shoes_link}</arg>
+</arguments>
+<msg timestamp="20201206 14:19:07.159" level="INFO">Clicking element 'css:li[id='shoes']'.</msg>
+<status status="PASS" starttime="20201206 14:19:07.159" endtime="20201206 14:19:07.696"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>${all_mens_shoes_link}</arg>
+<arg>15 Seconds</arg>
+</arguments>
+<status status="PASS" starttime="20201206 14:19:07.696" endtime="20201206 14:19:10.193"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>${all_mens_shoes_link}</arg>
+</arguments>
+<msg timestamp="20201206 14:19:10.194" level="INFO">Clicking link 'link:All Mens Shoes'.</msg>
+<status status="PASS" starttime="20201206 14:19:10.194" endtime="20201206 14:19:12.386"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${sortby_field}</arg>
+</arguments>
+<msg timestamp="20201206 14:19:12.387" level="INFO">Clicking element 'css:select[name='sortBy']'.</msg>
+<status status="PASS" starttime="20201206 14:19:12.386" endtime="20201206 14:19:12.962"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>${sortby_field}</arg>
+<arg>p</arg>
+</arguments>
+<msg timestamp="20201206 14:19:12.963" level="INFO">Sending key(s) ('p',) to css:select[name='sortBy'] element.</msg>
+<msg timestamp="20201206 14:19:13.979" level="INFO">Sending key p</msg>
+<status status="PASS" starttime="20201206 14:19:12.962" endtime="20201206 14:19:14.297"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>${sortby_field}</arg>
+<arg>RETURN</arg>
+</arguments>
+<msg timestamp="20201206 14:19:14.299" level="INFO">Sending key(s) ('RETURN',) to css:select[name='sortBy'] element.</msg>
+<msg timestamp="20201206 14:19:15.094" level="INFO">Pressing special key RETURN to element.</msg>
+<msg timestamp="20201206 14:19:15.094" level="INFO">Releasing special key RETURN.</msg>
+<status status="PASS" starttime="20201206 14:19:14.298" endtime="20201206 14:19:15.355"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${page_2_link}</arg>
+</arguments>
+<msg timestamp="20201206 14:19:15.356" level="INFO">Clicking element 'css:a[href="?pg=2"]'.</msg>
+<status status="PASS" starttime="20201206 14:19:15.355" endtime="20201206 14:19:17.573"></status>
+</kw>
+<kw name="Page Should Not Contain" library="SeleniumLibrary">
+<doc>Verifies the current page does not contain ``text``.</doc>
+<arguments>
+<arg>£25000.00</arg>
+</arguments>
+<msg timestamp="20201206 14:19:19.931" level="INFO">Current page does not contain text '£25000.00'.</msg>
+<status status="PASS" starttime="20201206 14:19:17.573" endtime="20201206 14:19:19.931"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20201206 14:19:19.932" endtime="20201206 14:19:20.242"></status>
+</kw>
+<status status="PASS" starttime="20201206 14:19:02.333" endtime="20201206 14:19:20.242" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20201206 14:19:02.202" endtime="20201206 14:19:20.243"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="FilterError test">FilterError test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
