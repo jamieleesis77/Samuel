@@ -24,7 +24,7 @@ webdrivermanager firefox chrome --linkpath /usr/local/bin
 
 ```bash
 cd path/to/project/folder
-robot Tests/*_test.robot
+robot **/*_test.robot
 ```
 
 ## Artefacts 
