@@ -1,12 +1,33 @@
-# Samuel
-SortBy error demo
+# SortBy Error Demo
 
-This project uses Robot Framework with Selenium. Robot Framework is a Python project.
+Robot Framework Selenium test design to automate sort by function.
 
-#To Install
-Install python from the Python website
-Install pip (Python packagae manager)
+## Dependancies
+
+[Python](https://www.python.org/downloads/)
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install the following.
+
+```bash
 pip install robot-framework
 pip install --upgrade robotframework-seleniumlibrary
 pip install webdrivermanager
+```
+
+Use the webdrivermanager to install the following. (MacOS)
+
+```bash
 webdrivermanager firefox chrome --linkpath /usr/local/bin
+```
+
+## Usage
+
+```bash
+cd path/to/project/folder
+robot Tests/*_test.robot
+```
+
+## Artefacts 
+* log.html (Readable log of results)
+* output.xml (XML log of results)
+* report.html (Readable log of suite)
